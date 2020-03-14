@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import logo from '../../logo.jpg'
 
+
 const Wrapper = styled.a.attrs({
     className: 'navbar-brand',
 })``

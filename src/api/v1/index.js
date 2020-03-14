@@ -4,8 +4,8 @@ const api = axios.create({
     baseURL: 'http://localhost:3000/api/v1',
 })
 
-export const getAllMovies = () => api.get(`/concerts/index`)
-export const getMovieById = id => api.get(`/concerts/${id}`)
+export const getAllConcerts = () => api.get(`/concerts/index`)
+export const getConcertById = id => api.get(`/concerts/${id}`)
 
 const apis = {
   getAllConcerts,
