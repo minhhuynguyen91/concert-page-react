@@ -23,8 +23,7 @@ class HomeBanner extends Component {
       concerts: [],
       isLoading: false,
     }
-
-    this.MarqueeList = [];
+    
   }
 
   componentDidMount = async () => {
@@ -32,16 +31,10 @@ class HomeBanner extends Component {
     await api.getAllConcerts()
       .then(concerts => {
         this.setState({
-          concerts: concerts,
+          concerts: concerts.data.data,
           isLoading: false
         })
-
-        for(var i=0 ; i<this.state.concerts.data.data.length ;i++) {
-          this.MarqueeList.push(<ConcertMarqueeImage src={this.state.concerts.data.data[i].img_link} key={i} />)
-        }
-        console.log(this.state.concerts.data.data);
-        console.log(this.MarqueeList)
-
+        // console.log(this.state.concerts);
       })
 
       .catch(err => {
@@ -53,8 +46,15 @@ class HomeBanner extends Component {
     return(
       <div className="container">
         <BannerImage src={bannerImg} />
-        <marquee behavior="scroll" scrollamount="18" onmouseover="this.stop();" onmouseout="this.start();">
-          {this.MarqueeList}
+
+
+        <marquee behavior="scroll" scrollamount="18">
+        
+          {
+            this.state.concerts.map((concert, index) => (
+              <ConcertMarqueeImage src={concert.img_link} key={index} />
+            ))
+          }
         </marquee>
       </div>
     )

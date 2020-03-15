@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import NavBar  from '../components/navbar/Navbar'
-import {HomeBanner} from '../screen/homepage/index'
+import HomePage from '../screen/homepage/index'
 
 // import { MoviesList, MoviesInsert, MoviesUpdate } from '../pages'
 
@@ -13,7 +13,7 @@ function App() {
         <Router>
             <NavBar />
             <Switch>
-              <Route path="/" extract component={HomeBanner} />
+              <Route path="/" extract component={HomePage} />
             </Switch>
         </Router>
     )

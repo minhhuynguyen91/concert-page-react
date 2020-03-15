@@ -3,4 +3,16 @@ import styled from 'styled-components'
 
 import HomeBanner from './banner/Banner' 
 
-export {HomeBanner};
+class HomePage extends Component {
+  render() {
+    return(
+      <div>
+        <HomeBanner />
+      </div>
+    )
+  }
+
+}
+
+
+export default HomePage;
