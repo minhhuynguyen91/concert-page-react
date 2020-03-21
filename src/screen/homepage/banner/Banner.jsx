@@ -4,6 +4,10 @@ import styled from 'styled-components'
 import bannerImg from '../../../images/banner_image.jpg'
 import api from '../../../api/v1/index'
 
+// import { ConcertData } from '../data/getAllConcert'
+
+// console.log(ConcertData)
+
 const BannerImage = styled.img.attrs({
   className: 'img-fluid'
 })``
@@ -49,10 +53,12 @@ class HomeBanner extends Component {
 
 
         <marquee behavior="scroll" scrollamount="18">
-        
+          
           {
             this.state.concerts.map((concert, index) => (
-              <ConcertMarqueeImage src={concert.img_link} key={index} />
+              <Link to={"concerts/" + concert._id} key={index} >
+                <ConcertMarqueeImage src={concert.img_link} />
+              </Link>
             ))
           }
         </marquee>
