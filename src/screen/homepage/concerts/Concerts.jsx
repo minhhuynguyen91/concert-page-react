@@ -3,6 +3,14 @@ import styled from 'styled-components'
 import api from '../../../api/v1/index'
 import Carousel from 'react-bootstrap/Carousel'
 
+import './concert.css'
+//import leftArrow from '../../../components/img/left-arrow.png'
+
+import Container from 'react-bootstrap/Container'
+import Card from 'react-bootstrap/Card'
+import { Link } from 'react-router-dom'
+
+
 const ConcertHeaderTitle = styled.h2.attrs({
   className: 'h1-responsive font-weight-bold my-5'
 })`
@@ -38,18 +46,27 @@ class HomeConcert extends Component {
   render() {
     var concertCounter = 0;
     return(
-      <div className="container text-center my-5">
-        <ConcertHeaderTitle> Vở diễn sắp trình diễn </ConcertHeaderTitle>
-        <Carousel> 
-          {
-            this.state.concerts.map((concert, index) => (
-              <Carousel.Item key={index}>
-                <img src={concert.img_link} />
-              </Carousel.Item>
-            ))
-          }
-        </Carousel>  
-    
+      <div className="text-center my-5">
+        <Container>
+          <ConcertHeaderTitle> Vở diễn sắp trình diễn </ConcertHeaderTitle>
+          
+            <Carousel indicators={true}> 
+              {
+                this.state.concerts.map((concert, index) => (
+                  <Carousel.Item key={index}>
+                    <Link to={"/concerts/" + concert._id}>
+                      <Card className='border-0'>
+                        <Card.Img variant="top" src={concert.img_link} className="concert-img-card-display" />
+                        <Card.Body>
+                          <Card.Title> {concert.title} </Card.Title>
+                        </Card.Body>
+                      </Card>
+                    </Link>
+                  </Carousel.Item>
+                ))
+              }
+            </Carousel>
+        </Container>
       </div>
     )
   }
