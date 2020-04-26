@@ -6,10 +6,12 @@ const api = axios.create({
 
 export const getAllConcerts = () => api.get(`/concerts/index`)
 export const getConcertById = id => api.get(`/concerts/${id}`)
+export const getAllCommencedDates = () => api.get(`/commencedDates/index`)
 
 const apis = {
   getAllConcerts,
-  getConcertById
+  getConcertById,
+  getAllCommencedDates
 }
 
 export default apis

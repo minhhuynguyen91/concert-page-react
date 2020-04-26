@@ -44,7 +44,6 @@ class HomeConcert extends Component {
   }
 
   render() {
-    var concertCounter = 0;
     return(
       <div className="text-center my-5">
         <Container>

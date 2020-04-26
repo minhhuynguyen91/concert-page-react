@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import HomeBanner from './banner/Banner' 
 import HomeConcert from './concerts/Concerts'
+import HomeCommencedDates from './commencedDates/HomeCommencedDates'
 
 class HomePage extends Component {
   render() {
@@ -10,6 +11,7 @@ class HomePage extends Component {
       <div>
         <HomeBanner />
         <HomeConcert />
+        <HomeCommencedDates />
       </div>
     )
   }
