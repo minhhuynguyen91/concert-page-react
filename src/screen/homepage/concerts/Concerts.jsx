@@ -4,12 +4,12 @@ import api from '../../../api/v1/index'
 import Carousel from 'react-bootstrap/Carousel'
 
 import './concert.css'
-//import leftArrow from '../../../components/img/left-arrow.png'
 
 import Container from 'react-bootstrap/Container'
 import Card from 'react-bootstrap/Card'
 import { Link } from 'react-router-dom'
 
+import ConcertId from '../../concerts/concertId'
 
 const ConcertHeaderTitle = styled.h2.attrs({
   className: 'h1-responsive font-weight-bold my-5'

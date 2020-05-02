@@ -68,8 +68,11 @@ class HomeConcertNews extends Component {
                   </Link>
                 
               </Carousel.Item>
+
+              
             ))
           }
+
         </Carousel>
       </Container>
     )
