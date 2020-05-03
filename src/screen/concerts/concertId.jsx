@@ -11,24 +11,51 @@ import Col from 'react-bootstrap/Col'
 
 import {withRouter} from 'react-router';
 
+import './concert.css'
+import marked from 'marked'
+
+const ConcertTitle = styled.h1.attrs({
+  className: 'text-center pt-2 pb-2'
+})`
+  text-transform: capitalize
+`
+
+const ConcertNote = styled.div.attrs({
+  className: 'pt-2'
+})``
+
+const ConcertSeatTitle = styled.h2.attrs({
+  className: 'text-center pt-2 pb-2'
+})`
+  text-transform: capitalize
+`
+
+const SeatImg = styled.img.attrs({
+  className: 'pt-2 d-flex justify-content-center'
+})`
+  width: 100%;
+`
+
 class ConcertId extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      concertId: [],
+      concertIdData: [],
+      markdownContent: "",
       isLoading: false
     }
   }
 
   componentDidMount = async () => {
     this.setState({isLoading: true})
-    console.log(this.props)
     await api.getConcertById(this.props.match.params.id)
-      .then(concertNews => {
+      .then(concertIdData => {
         this.setState({
-          concertNews: concertNews.data.data,
+          concertIdData: concertIdData.data.data,
+          markedDownHtml: this.getMarkdowntext(concertIdData.data.data.content),
           isLoading: false
         })
+        
       })
 
       .catch(err => {
@@ -36,11 +63,46 @@ class ConcertId extends Component {
       });
   }
 
+  getMarkdowntext(markdownText) {
+    var rawInput = marked(markdownText, {sanitize: true})
+    return {__html : rawInput}
+  }
+
   render() {
-    console.log(this.props)
     return(
-      <div> Hello bois
-      </div>
+      <Container>
+        <Row>
+          <Col lg={12} sm={12}>
+            <img src={this.state.concertIdData.img_link} className="concert-photo" /> 
+          </Col>
+
+          <Col lg={12} sm={12}>
+            <ConcertTitle> {this.state.concertIdData.title} </ConcertTitle>
+            <ConcertNote> Số ghế: {this.state.concertIdData.tickets} </ConcertNote>
+
+            <ConcertNote> Thể loại: {this.state.concertIdData.note}  </ConcertNote>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col lg={12} sm={12}>
+            <h2> Nội Dung </h2>
+          </Col>
+
+          <Col lg={12} sm={12} className="pt-2">
+            <div dangerouslySetInnerHTML={this.state.markedDownHtml} />
+          </Col>
+
+          <Col lg={12} sm={12} className="pt-2">
+            <ConcertSeatTitle className="text-center"> Sơ đồ ghế ngồi </ConcertSeatTitle>
+          </Col>
+
+          <Col lg={12} sm={12}>
+            <SeatImg  src={this.state.concertIdData.seat_image_url != "" ? this.state.concertIdData.seat_image_url : "https://via.placeholder.com/700x500"} />
+          </Col>
+        </Row>
+
+      </Container>
     )
   }
 }
