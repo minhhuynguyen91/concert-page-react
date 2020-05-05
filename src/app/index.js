@@ -5,7 +5,11 @@ import NavBar  from '../components/navbar/Navbar'
 import Routes from '../components/routes/Routes'
 import History from '../components/routes/History'
 
+
 import 'bootstrap/dist/css/bootstrap.min.css'
+import $ from 'jquery';
+import Popper from 'popper.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 function App() {
     return (

@@ -15,7 +15,7 @@ const LogoLarge = styled.div.attrs({
 class Logo extends Component {
     render() {
         return (
-            <Wrapper href="#">
+            <Wrapper href="/">
                 <img src={logo} width="50" height="50" />
             </Wrapper>
         )

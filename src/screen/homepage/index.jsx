@@ -5,6 +5,7 @@ import HomeBanner from './banner/Banner'
 import HomeConcert from './concerts/Concerts'
 import HomeCommencedDates from './commencedDates/HomeCommencedDates'
 import HomeConcertNews from './concertNews/HomeConcertNews'
+import HomeArtist from './artists/HomeArtist'
 
 class HomePage extends Component {
   render() {
@@ -14,6 +15,7 @@ class HomePage extends Component {
         <HomeConcert />
         <HomeCommencedDates />
         <HomeConcertNews />
+        <HomeArtist />
       </div>
     )
   }

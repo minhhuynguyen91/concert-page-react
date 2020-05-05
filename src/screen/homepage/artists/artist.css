@@ -1,0 +1,6 @@
+.artist-thumbnail-avatar {
+  width: 150px; 
+  height: 25vh; 
+  object-fit: cover;
+}
+

@@ -14,7 +14,7 @@ const BannerImage = styled.img.attrs({
 
 const ConcertMarqueeImage = styled.img.attrs({
 })`
-  height: 20vw;
+  height: 25vw;
   object-fit: cover;
   display: inline-block;
   padding: 1vw;
@@ -52,7 +52,7 @@ class HomeBanner extends Component {
         <BannerImage src={bannerImg} />
 
 
-        <marquee behavior="scroll" scrollamount="18">
+        <marquee behavior="scroll" scrollamount="8">
           
           {
             this.state.concerts.map((concert, index) => (
