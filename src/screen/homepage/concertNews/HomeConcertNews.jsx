@@ -55,7 +55,7 @@ class HomeConcertNews extends Component {
     return(
       <Container className="pt-4 mb-4">
         <HeaderTitle> Tin tức nhà hát </HeaderTitle>
-        <Carousel indicators={true} interval={false}> 
+        <Carousel indicators={false} interval={false}> 
           {
             this.state.concertNews.map((news, index) => (
               <Carousel.Item key={index}>
@@ -66,10 +66,7 @@ class HomeConcertNews extends Component {
                     </ConcertNewsDisplay>
                     <NewsTitle> {news.title} </NewsTitle>
                   </Link>
-                
-              </Carousel.Item>
-
-              
+              </Carousel.Item>   
             ))
           }
 

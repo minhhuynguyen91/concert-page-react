@@ -11,6 +11,7 @@ export const getAllConcertNews = () => api.get(`/concertNews/index`)
 export const getAllConcertNewsById = id => api.get(`/concertNews/${id}`)
 export const getAllArtist = () => api.get(`/artists/index`)
 export const getArtistById = id => api.get(`/artists/${id}`)
+export const getAllVideos = () => api.get(`/referralVideos/index`)
 
 const apis = {
   getAllConcerts,
@@ -19,7 +20,8 @@ const apis = {
   getAllConcertNews,
   getAllConcertNewsById,
   getAllArtist,
-  getArtistById
+  getArtistById,
+  getAllVideos
 }
 
 export default apis

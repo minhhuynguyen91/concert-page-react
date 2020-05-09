@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import NavBar  from '../components/navbar/Navbar'
 import Routes from '../components/routes/Routes'
 import History from '../components/routes/History'
-
+import Footer from '../screen/footer/footer'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import $ from 'jquery';
@@ -16,6 +16,7 @@ function App() {
         <Router history={History}>
             <NavBar />
             <Routes />
+            <Footer />
         </Router>
     )
 }
