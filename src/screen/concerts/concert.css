@@ -3,3 +3,90 @@
   height: 60vw;
   object-fit: contain;
 }
+.concert-title{
+  text-transform: uppercase;
+}
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+    /* Styles */
+  .concert-content table {
+    width: 100%;
+  }
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+    /* Styles */
+  .concert-content table {
+    width: 100%;
+  }
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+  .concert-img-card-display {
+    width: 100%;
+    height: 50vw;
+    object-fit: cover;
+  }
+  
+  .concert-content table {
+    width: 100%;
+  }
+
+    /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+    /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+    /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+  .concert-img-card-display {
+    width: 100%;
+    height: 30vw;
+    object-fit: contain;
+  }
+  
+  .concert-content table {
+    width: 100%;
+  }
+
+    /* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+    /* Styles */
+  .concert-img-card-display {
+    width: 100%;
+    height: 30vw;
+    object-fit: contain;
+  }
+  
+  .concert-content table {
+    width: 100%;
+  }
+  
+}

@@ -14,6 +14,8 @@ import {withRouter} from 'react-router';
 import './concert.css'
 import marked from 'marked'
 
+import moment from 'moment'
+
 const ConcertTitle = styled.h1.attrs({
   className: 'text-center pt-2 pb-2'
 })`
@@ -42,6 +44,7 @@ class ConcertId extends Component {
     this.state = {
       concertIdData: [],
       markdownContent: "",
+      commencedDates: "",
       isLoading: false
     }
   }
@@ -51,8 +54,9 @@ class ConcertId extends Component {
     await api.getConcertById(this.props.match.params.id)
       .then(concertIdData => {
         this.setState({
-          concertIdData: concertIdData.data.data,
-          markedDownHtml: this.getMarkdowntext(concertIdData.data.data.content),
+          concertIdData: concertIdData.data.data[0],
+          markedDownHtml: this.getMarkdowntext(concertIdData.data.data[0].content),
+          commencedDates: this.extractCommencedDates(concertIdData.data.data[0]),
           isLoading: false
         })
         
@@ -63,7 +67,24 @@ class ConcertId extends Component {
       });
   }
 
+  extractCommencedDates(srcInput) {
+    // console.log(srcInput.commenceddatesDetails);
+    var commencedList = ""
+    if (srcInput.commenceddatesDetails.length == 0) {
+      commencedList = "Xuất diễn: HIỆN TẠI CHƯA CÓ XUẤT DIỄN"
+      // return {__html : "Xuất diễn: HIỆN TẠI CHƯA CÓ XUẤT DIỄN" }
+    } else {
+      commencedList = "<ul>"
+      srcInput.commenceddatesDetails.forEach(e => 
+        commencedList = commencedList + "<li>" + e.start_time + " - "+ moment(e.start_date).format('DD/MM/YYYY') + "</li>"
+      )
+      commencedList = commencedList + "</ul>"
+    }
+    return commencedList
+  }  
+
   getMarkdowntext(markdownText) {
+    // console.log(markdownText)
     var rawInput = marked(markdownText, {sanitize: true})
     return {__html : rawInput}
   }
@@ -81,6 +102,8 @@ class ConcertId extends Component {
             <ConcertNote> Số ghế: {this.state.concertIdData.tickets} </ConcertNote>
 
             <ConcertNote> Thể loại: {this.state.concertIdData.note}  </ConcertNote>
+            
+            <ConcertNote dangerouslySetInnerHTML={{ __html: this.state.commencedDates}}/> 
           </Col>
         </Row>
 

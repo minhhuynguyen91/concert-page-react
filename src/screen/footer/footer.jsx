@@ -13,37 +13,38 @@ class Footer extends Component {
 
   render() {
     return (
-      <Container className="contact-info" fluid>
-        <Row>
-          <Col>
-            <p className="mbr-text">
-              <strong> Địa chỉ </strong>
-              <br />
-              5B Võ Văn Tần, P.6, Quận 3, Hồ Chí Minh
-              <br />
-              <br />
-              <strong> Liên Hệ </strong>
-              <br />
-              Phone: (028) 3824 2465
-              <br />
-              Email: Nhahat5B@gmail.com 
-            </p>
-          </Col>
+      <div className="contact-info">
+        <Container fluid="md">
+          <Row>
+            <Col sm={12} xs={12} md={6} lg={6}>
+              <p className="mbr-text">
+                <strong> Địa chỉ </strong>
+                <br />
+                5B Võ Văn Tần, P.6, Quận 3, Hồ Chí Minh
+                <br />
+                <br />
+                <strong> Liên Hệ </strong>
+                <br />
+                Phone: (028) 3824 2465
+                <br />
+                Email: Nhahat5B@gmail.com 
+              </p>
+            </Col>
 
-          <Col>
-            <p className="mbr-text">
-              <strong> Phản Hồi </strong>
-              <br /> Mọi chi tiết phản hồi của quý khách đều được chúng tôi cân nhắc và đánh giá cao            
-            </p>
-          </Col>
-            <div className="google-map-mb-5">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.399866519003!2d106.6920253148008!3d10.780654992318686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f372e05fe07%3A0xf4ac0923542ebb1e!2zNUIgVsO1IFbEg24gVOG6p24sIFBoxrDhu51uZyA2LCBRdeG6rW4gMywgSOG7kyBDaMOtIE1pbmgsIFZpZXRuYW0!5e0!3m2!1sen!2ssg!4v1568874294860!5m2!1sen!2ssg" width="450" height="450" frameBorder="0" allowFullScreen />
-            </div>
-          <Col>
-
-          </Col>
-        </Row>
-      </Container>
+            <Col sm={12} xs={12} md={6} lg={6}>
+              <p className="mbr-text">
+                <strong> Phản Hồi </strong>
+                <br /> Mọi chi tiết phản hồi của quý khách đều được chúng tôi cân nhắc và đánh giá cao            
+              </p>
+            </Col>
+            <Col sm={12} xs={12} md={12} lg={12}>
+              <div className="google-map mb-5">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.399866519003!2d106.6920253148008!3d10.780654992318686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f372e05fe07%3A0xf4ac0923542ebb1e!2zNUIgVsO1IFbEg24gVOG6p24sIFBoxrDhu51uZyA2LCBRdeG6rW4gMywgSOG7kyBDaMOtIE1pbmgsIFZpZXRuYW0!5e0!3m2!1sen!2ssg!4v1568874294860!5m2!1sen!2ssg"  height="450px" width="350px" frameBorder="0" allowFullScreen className="google-map-resp"/>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
     )
   }
 }
