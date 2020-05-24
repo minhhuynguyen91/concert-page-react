@@ -6,7 +6,7 @@ import Nav from 'react-bootstrap/Nav'
 
 import './navbar.css'
 
-const NavBarItem = styled.li.attrs({
+const NavBarItem = styled.div.attrs({
   className: 'nav-item',
 })`
   padding-left: 2em;
@@ -25,19 +25,25 @@ class NavBarItems extends Component {
         <Navbar collapseOnSelect expand="lg" bg="light" variant="light"> 
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link>
-              <Link to="/" className="nav-link"> Trang Chủ </Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to="/contact" className="nav-link"> Giới thiệu </Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to="/concerts" className="nav-link "> Vở diễn </Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to="/commencedDates" className="nav-link"> Lịch Diễn </Link>
-            </Nav.Link>
+          <Nav className="nav mx-auto ">
+              <NavBarItem>
+                  <Link to="/" className="nav-link"> Trang Chủ </Link>
+              </NavBarItem>
+            
+              <NavBarItem>
+                <Link to="/contact" className="nav-link"> Giới thiệu </Link>
+              </NavBarItem>
+            
+            
+              <NavBarItem>
+                <Link to="/concerts" className="nav-link "> Vở diễn </Link>
+              </NavBarItem>
+            
+            
+              <NavBarItem>
+                <Link to="/commencedDates" className="nav-link"> Lịch Diễn </Link>
+              </NavBarItem>
+          
           </Nav>
         </Navbar.Collapse>
 
