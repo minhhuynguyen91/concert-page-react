@@ -1,0 +1,16 @@
+/*.nav-link {
+  padding-left: 2em;
+  padding-right: 2em;
+
+  :hover {
+    border-style: solid;
+    color: red;
+  }
+}
+*/
+
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-left: 2em;
+  padding-right: 2em;  
+}

@@ -7,6 +7,7 @@ import ConcertId  from '../../screen/concerts/concertId'
 import ArtistId  from '../../screen/artists/artistId'
 import ConcertNewsId from '../../screen/concertNews/concertNewsId'
 import Introduce from '../../screen/introduce/introduce'
+import HomeCommencedDates from '../../screen/homepage/commencedDates/HomeCommencedDates'
 import NotFoundPage  from '../../screen/notFoundPage/notFoundPage'
 
 export default function Routes() {
@@ -18,6 +19,7 @@ export default function Routes() {
       <Route path="/artists/:id" component={ArtistId} />
       <Route path="/concertNews/:id" component={ConcertNewsId} />
       <Route path="/contact" component={Introduce} />
+      <Route path="/commencedDates" component={HomeCommencedDates} />
       <Route path="*" component={NotFoundPage} />
     </Switch>
   )
