@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import styled from 'styled-components'
 import api from '../../../api/v1/index'
@@ -19,7 +19,9 @@ const VideoStyle = styled.div.attrs({
 
 const VideoTitle = styled.h3.attrs({
   className: 'text-center'
-})``
+})`
+  text-transform: uppercase;
+`
 
 const SrcParsing = (srcInput) => {
   // console.log(srcInput.srcInput)
@@ -31,7 +33,7 @@ const SrcParsing = (srcInput) => {
   }
   else {
     return(
-      <div className="fb-video" data-href={srcInput.srcInput.url} data-width='250' data-height='315' data-show-text='false' data-allowfullscreen='true'>
+      <div className="fb-video" data-href={srcInput.srcInput.url} data-width='300' data-height='315' data-show-text='false' data-allowfullscreen='true'>
         <div className="fb-xfbml-parse-ignore"> </div>
       </div>)
   }
@@ -58,8 +60,8 @@ const VideoRender = () => {
 
   if (load) {
     return(
-      <div>
-        <Carousel interval={false} indicators={true}>
+      <div className="pb-2">
+        <Carousel interval={false} indicators={false}>
           {
             videos.map((video, index) => (
               <Carousel.Item key={index}>

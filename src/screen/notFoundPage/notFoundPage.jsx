@@ -10,8 +10,8 @@ class NotFoundPage extends React.Component{
         <img src={PageNotFound}  />
       </div>
 
-      <div>
-        <Link to="/" className="d-flex justify-content-center">Go to Home </Link>
+      <div className="pt-2 pb-4">
+        <Link to="/" className="d-flex justify-content-center btn btn-primary">Về Trang Chủ </Link>
       </div>
     </div>
     )
