@@ -1,0 +1,38 @@
+[
+    {
+        "name" : "Vu Thanh Truc",
+        "avatar": "https://i.imgur.com/0S0XrzV.png",
+        "title" : "Khán Giả",
+        "rating": "⭐⭐⭐⭐⭐",
+        "content": "Rất thích cách bố trí không gian xem kịch ở đây. Gần gũi, Tương tác, mang lại nhiều cảm xúc cho khán giả"       
+    },
+    {
+        "name" : "Dien Huy",
+        "avatar": "https://i.imgur.com/dbZqokg.png",
+        "title" : "Khán Giả",
+        "rating": "⭐⭐⭐⭐⭐",
+        "content": "mình đã xem nhà hát này từ những năm 1990 , và luôn luôn cảm.thấy hay , ý nghĩa và rất hài lòng"       
+    }, 
+    {
+        "name" : "Thái Vũ",
+        "avatar": "https://i.imgur.com/dbZqokg.png",
+        "title" : "Khán Giả",
+        "rating": "❤️❤️❤️❤️❤️",
+        "content": "Tùy từng không gian, thời gian và những con người sống trong đam mê nghệ thuật thì chúng ta sẽ có được những tác phẩm với từng mức giá trị khác nhau, có thể rất là lớn và cũng có thể trong một mức độ vừa tầm ( trong khả năng và điều kiện cho phép )....\nNhưng dù to, hay nhỏ, hay vừa tầm thì tất cả các tác phẩm nghệ thuật đó cũng điều là thành quả tâm huyết của tất cả những con người sống vì nghệ thuật và chúng ta phải trân quý nó !"
+    },
+    {
+        "name" : "Nguyễn Khuê",
+        "avatar": "https://i.imgur.com/dbZqokg.png",
+        "title" : "Khán Giả",
+        "rating": "⭐⭐⭐⭐⭐",
+        "content": "Vở kịch vui vẻ, nhẹ nhàng. ủng hộ sân khấu luôn sáng đèn"
+    },
+    {
+        "name" : "EstherWong ThuyNguyen",
+        "avatar": "https://i.imgur.com/0S0XrzV.png",
+        "title" : "Khán Giả",
+        "rating": "❤️❤️❤️❤️❤️",
+        "content": "Hy vọng rằng sân khấu 5B sẽ vẫn tiếp tục sáng tạo khai thác những chủ đề mới mẻ, để khán giả có dịp thưởng thức những sản phẩm nghệ thuật chất lượng tốt như Diều ơi! nữa nhé!!!^^. Cheer!!!"
+    }
+    
+]

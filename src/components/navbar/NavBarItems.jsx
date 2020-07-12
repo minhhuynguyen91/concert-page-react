@@ -9,8 +9,8 @@ import './navbar.css'
 const NavBarItem = styled.div.attrs({
   className: 'nav-item',
 })`
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: 3em;
+  padding-right: 3em;
 
   :hover {
     border-style: solid;
@@ -23,29 +23,30 @@ class NavBarItems extends Component {
     return(
       <div> 
         <Navbar collapseOnSelect expand="lg" bg="light" variant="light"> 
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="nav mx-auto ">
-              <NavBarItem>
-                  <Link to="/" className="nav-link"> Trang Chủ </Link>
-              </NavBarItem>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
             
-              <NavBarItem>
-                <Link to="/contact" className="nav-link"> Giới thiệu </Link>
-              </NavBarItem>
+            <ul className="nav navbar-nav mx-auto ">
+                <NavBarItem>
+                    <Link to="/" className="nav-link"> Trang Chủ </Link>
+                </NavBarItem>
+              
+                <NavBarItem>
+                  <Link to="/contact" className="nav-link"> Giới thiệu </Link>
+                </NavBarItem>
+              
+              
+                <NavBarItem>
+                  <Link to="/concerts" className="nav-link "> Vở diễn </Link>
+                </NavBarItem>
+              
+              
+                <NavBarItem>
+                  <Link to="/commencedDates" className="nav-link"> Lịch Diễn </Link>
+                </NavBarItem>
             
-            
-              <NavBarItem>
-                <Link to="/concerts" className="nav-link "> Vở diễn </Link>
-              </NavBarItem>
-            
-            
-              <NavBarItem>
-                <Link to="/commencedDates" className="nav-link"> Lịch Diễn </Link>
-              </NavBarItem>
-          
-          </Nav>
-        </Navbar.Collapse>
+            </ul>
+          </Navbar.Collapse>
 
         </Navbar>
       </div>

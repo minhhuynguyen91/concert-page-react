@@ -7,7 +7,7 @@ import HomeCommencedDates from './commencedDates/HomeCommencedDates'
 import HomeConcertNews from './concertNews/HomeConcertNews'
 import HomeArtist from './artists/HomeArtist'
 import HomeConcertVideos from './concertVideos/concertVideos'
-
+import Testimony from './testimony/Testimony'
 
 class HomePage extends Component {
   render() {
@@ -19,6 +19,7 @@ class HomePage extends Component {
         <HomeConcertNews />
         <HomeConcertVideos />
         <HomeArtist />
+        <Testimony />
       </div>
     )
   }
