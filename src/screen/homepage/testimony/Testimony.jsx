@@ -43,7 +43,7 @@ class Testimony extends Component {
             testimonies: data,
             isLoading: true
         })
-        console.log(data)
+        // console.log(data)
     }
 
     render() {

@@ -45,6 +45,10 @@ class NavBarItems extends Component {
                   <Link to="/commencedDates" className="nav-link"> Lịch Diễn </Link>
                 </NavBarItem>
             
+                <NavBarItem>
+                  <Link to="/login" className="nav-link"> Đăng Nhập </Link>
+                </NavBarItem>
+            
             </ul>
           </Navbar.Collapse>
 
