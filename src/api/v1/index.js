@@ -12,6 +12,8 @@ export const getAllConcertNewsById = id => api.get(`/concertNews/${id}`)
 export const getAllArtist = () => api.get(`/artists/index`)
 export const getArtistById = id => api.get(`/artists/${id}`)
 export const getAllVideos = () => api.get(`/referralVideos/index`)
+export const postAuth = loginInfo => api.post('/login', loginInfo)
+export const getSession = () => api.get(`/session`) 
 
 const apis = {
   getAllConcerts,
@@ -21,7 +23,9 @@ const apis = {
   getAllConcertNewsById,
   getAllArtist,
   getArtistById,
-  getAllVideos
+  getAllVideos,
+  postAuth,
+  getSession
 }
 
 export default apis

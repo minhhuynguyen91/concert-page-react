@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+import styled, { ThemeConsumer } from 'styled-components'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 
 import './navbar.css'
+import api from "../../api/v1/index"
 
 const NavBarItem = styled.div.attrs({
   className: 'nav-item',
@@ -19,6 +20,27 @@ const NavBarItem = styled.div.attrs({
 `
 
 class NavBarItems extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      session: '',
+      isLoading: false
+    }
+  }
+
+  componentDidMount = () => {
+    // await api.getSession()
+    //   .then(session => {
+    //     console.log(session)
+    //   })
+
+    //   .catch(err => {
+    //     console.log("Hello")
+    //     console.log(err)
+    //   })
+    
+  }
+
   render() {
     return(
       <div> 
